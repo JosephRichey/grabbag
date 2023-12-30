@@ -1,11 +1,11 @@
 Package: grabbag
-Title: What the Package Does (One Line, Title Case)
+Title: A Collection of Random Useful Functions
 Version: 0.0.0.9000
 Authors@R: c(
     person("Joseph", "Richey", , "jwrichey.1@gmail.com", role = c("aut", "cre")),
     person("Nathan", "Catalanotte", , "nathan.catalanotte@maverik.com", role = c("aut"))
            )
-Description: What the package does (one paragraph).
+Description: This is a package of functions that we have developed and found useful in our professional and personal work. Please feel free to use and expand upon it to make your life easier.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
