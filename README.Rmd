@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# grabbag
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This is a package of functions that we have developed and found useful in our professional and personal work. Please feel free to use and expand upon it to make your life easier.
+
+## Installation
+
+You can install the development version of grabbag from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("JosephRichey/grabbag")
+```
+
+## Current Functions
+
+### Sensitivity Table
+This function senerate a sensitivity table given a two input formula. For example, to generate a sensitivity table for monthly mortgage payments of a 30 year mortgage based on the principle and interest rate, you could do the following:
+
+```r
+# Load the library
+library(grabbag)
+
+# Define a function to calculate the monthly payment.
+pmt <- function(prinical, rate) {
+  prinical * (rate/12)/(1-(1+rate/12)^-360)
+}
+
+# Generate a DT table.
+GenerateSensitivityTable(pmt, 340000, .06, 10000, .0025)
+
+# Or, a matrix if you want to use a custom format.
+GenerateSensitivityTable(pmt, 340000, .06, 10000, .0025, 5, 5, 0, 'number', FALSE)
+
+
+```
+

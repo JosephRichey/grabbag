@@ -9,7 +9,7 @@ GenerateSensitivityVector <- function(base, numSteps, stepSize) {
                  -stepSize))
 
   if(length(names) != numSteps * 2 + 1) {
-    stop("The base paratmerts are too big and step size is too small. Please adjust your inputs.")
+    stop("The base parameters are too big and step size is too small. Please adjust your inputs.")
   }
 
   return(names)
